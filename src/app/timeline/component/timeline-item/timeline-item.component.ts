@@ -13,7 +13,7 @@ export class TimelineItemComponent implements OnInit {
 
   item: TimelineItem;
   hovering: boolean;
-  editMode: boolean = true;
+  editMode = true;
 
   @Input() set timelineItem(timelineItem: TimelineItem) {
     this._timelineItemOriginal = timelineItem;
@@ -46,7 +46,7 @@ export class TimelineItemComponent implements OnInit {
   }
 
   cancelEdit() {
-    if(!this._timelineItemOriginal.title) {
+    if (!this._timelineItemOriginal.title) {
       this.deleteItem();
       return;
     }

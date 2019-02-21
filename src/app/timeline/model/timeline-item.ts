@@ -11,7 +11,7 @@ export class TimelineItem {
     Object.assign(this, data);
 
     // ensure we don't get object ref here
-    if(data.hasOwnProperty('timestamp')) {
+    if (data.hasOwnProperty('timestamp')) {
       this.timestamp = moment(data.timestamp);
     }
   }
