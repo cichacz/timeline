@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {select} from '@angular-redux/store';
 import {TimelineItem} from '@timeline/model/timeline-item';
-import TimelineActions from '@timeline/store/actions';
+import {TimelineActions} from '@timeline/store/actions';
 import {Observable} from 'rxjs';
 import {first} from 'rxjs/operators';
 

@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TimelineItem} from '@timeline/model/timeline-item';
 import * as moment from 'moment';
-import TimelineActions from '@timeline/store/actions';
+import {TimelineActions} from '@timeline/store/actions';
 
 @Component({
   selector: 'app-timeline-item',

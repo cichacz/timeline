@@ -3,7 +3,7 @@ import {select} from '@angular-redux/store';
 import {Observable} from 'rxjs';
 import TimelineState from '@timeline/store/state';
 import {map} from 'rxjs/operators';
-import TimelineActions from '@timeline/store/actions';
+import {TimelineActions} from '@timeline/store/actions';
 
 @Component({
   selector: 'app-timeline-history',

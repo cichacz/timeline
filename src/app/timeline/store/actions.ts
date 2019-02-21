@@ -7,7 +7,7 @@ import {TimelineItem} from '@timeline/model/timeline-item';
 export type TimelineAction = FluxStandardAction<Partial<TimelineState>, number>;
 
 @Injectable()
-export default class TimelineActions {
+export class TimelineActions {
   static LOAD_ENTRIES = 'TIMELINE_LOAD_ENTRIES';
   static LOAD_ENTRIES_SUCCESS = 'TIMELINE_LOAD_ENTRIES_SUCCESS';
 

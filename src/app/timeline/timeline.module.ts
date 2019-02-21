@@ -6,8 +6,8 @@ import {MatButtonModule, MatInputModule, MatChipsModule, MatFormFieldModule, Mat
 import { TimelineViewComponent } from './component/timeline-view/timeline-view.component';
 import { TimelineItemComponent } from './component/timeline-item/timeline-item.component';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
-import TimelineEpics from '@timeline/store/epics';
-import TimelineActions from '@timeline/store/actions';
+import {TimelineEpics} from '@timeline/store/epics';
+import {TimelineActions} from '@timeline/store/actions';
 import {TimelineService} from '@timeline/service/timeline.service';
 import { TimelineHistoryComponent } from './component/timeline-history/timeline-history.component';
 

@@ -1,7 +1,7 @@
 import undoable, { distinctState, includeAction } from 'redux-undo';
 
 import TimelineState from '@timeline/store/state';
-import TimelineActions, {TimelineAction} from '@timeline/store/actions';
+import {TimelineActions, TimelineAction} from '@timeline/store/actions';
 
 const timelineReducer = (state: TimelineState = new TimelineState(), action: TimelineAction): TimelineState => {
   const newState = {...state};
