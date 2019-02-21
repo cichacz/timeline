@@ -1,0 +1,16 @@
+<h1 *ngIf="timelineName" class="clearfix">{{timelineName}}
+    <app-timeline-history class="timeline-history"></app-timeline-history>
+</h1>
+
+<ul>
+    <li *ngFor="let timelineItem of (timelineItems$ | async)">
+        <app-timeline-item [timelineItem]="timelineItem"></app-timeline-item>
+    </li>
+    <li>
+        <div class="add-btn">
+            <button mat-mini-fab color="primary" (click)="addEntry()" class="add-btn__btn">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </li>
+</ul>

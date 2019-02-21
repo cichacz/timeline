@@ -1,0 +1,30 @@
+:host {
+  width: 333px;
+  display: block;
+}
+
+.timeline-history {
+  float: right;
+}
+
+.add-btn {
+  display: flex;
+
+  &:before, &:after {
+    content: '';
+    flex: 1;
+  }
+
+  &:after {
+    flex: 3;
+  }
+
+  &__btn {
+    margin-left: -3px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

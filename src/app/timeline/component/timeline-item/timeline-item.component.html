@@ -1,0 +1,37 @@
+<div class="timeline-item" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
+    <div class="timeline-item__left-side">
+        <div class="timeline-item__time">
+            <input type="text" name="timestamp" [ngxTimepicker]="picker" [value]="item.timestamp"
+                   [disabled]="!editMode"/>
+            <ngx-material-timepicker #picker (timeSet)="updateTime($event)"></ngx-material-timepicker>
+        </div>
+    </div>
+    <div class="timeline-item__dot">
+        <span></span>
+    </div>
+    <div class="timeline-item__right-side">
+        <div class="timeline-item__title">
+            <mat-form-field>
+                <input type="text" name="title" [(ngModel)]="item.title" matInput [disabled]="!editMode"/>
+            </mat-form-field>
+        </div>
+        <div class="timeline-item__description">
+                <textarea name="description" [(ngModel)]="item.description" matInput rows="4"
+                          [disabled]="!editMode"></textarea>
+        </div>
+        <div class="timeline-item__actions">
+            <ng-container *ngIf="!editMode; else editActions">
+                <button mat-icon-button (click)="editMode = true">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button (click)="deleteItem()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </ng-container>
+        </div>
+    </div>
+</div>
+<ng-template #editActions>
+    <button mat-button (click)="cancelEdit()">Cancel</button>
+    <button mat-button color="primary" (click)="saveItem()">Save</button>
+</ng-template>

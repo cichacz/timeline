@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+@mixin timeline-item-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  $timelineColor: mat-color($primary);
+
+  .timeline-item {
+    &__time {
+      input {
+        color: #fff;
+        background: $timelineColor;
+      }
+    }
+
+    &__dot {
+      > span {
+        border-color: $timelineColor;
+      }
+
+      &:after {
+        border-color: $timelineColor;
+      }
+    }
+  }
+}
