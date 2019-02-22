@@ -3,7 +3,7 @@
         <div class="timeline-item__time">
             <input type="text" name="timestamp" [ngxTimepicker]="picker" [value]="item.timestamp"
                    [disabled]="!editMode"/>
-            <ngx-material-timepicker #picker (timeSet)="updateTime($event)"></ngx-material-timepicker>
+            <ngx-material-timepicker #picker [ngxMaterialTimepickerTheme]="timepickerTheme" (timeSet)="updateTime($event)"></ngx-material-timepicker>
         </div>
     </div>
     <div class="timeline-item__dot">

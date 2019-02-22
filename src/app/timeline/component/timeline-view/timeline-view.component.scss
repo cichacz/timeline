@@ -1,6 +1,9 @@
 :host {
-  width: 333px;
   display: block;
+
+  @media (min-width: 400px) {
+    width: 333px;
+  }
 }
 
 .timeline-history {

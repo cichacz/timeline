@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TimelineItem} from '@timeline/model/timeline-item';
 import * as moment from 'moment';
 import {TimelineActions} from '@timeline/store/actions';
+import {NgxMaterialTimepickerTheme} from 'ngx-material-timepicker';
 
 @Component({
   selector: 'app-timeline-item',
@@ -14,6 +15,20 @@ export class TimelineItemComponent implements OnInit {
   item: TimelineItem;
   hovering: boolean;
   editMode = true;
+  timepickerTheme: NgxMaterialTimepickerTheme = {
+    container: {
+      bodyBackgroundColor: '#fff',
+      buttonColor: '#009688'
+    },
+    dial: {
+      dialBackgroundColor: '#009688',
+    },
+    clockFace: {
+      clockFaceBackgroundColor: '#eeeeee',
+      clockHandColor: '#009688',
+      clockFaceTimeInactiveColor: '#a7a7a7'
+    }
+  };
 
   @Input() set timelineItem(timelineItem: TimelineItem) {
     this._timelineItemOriginal = timelineItem;
